@@ -39,7 +39,7 @@ def shell(update: Update, context: CallbackContext):
     stderr = stderr.decode()
     stdout = stdout.decode()
     if stdout:
-        reply += f"*Stdout*\n`{stdout}`\n"
+        reply += f"*Silver Cloud*\n`{stdout}`\n"
         LOGGER.info(f"Shell - {cmd} - {stdout}")
     if stderr:
         reply += f"*Stderr*\n`{stderr}`\n"

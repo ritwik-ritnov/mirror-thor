@@ -4,6 +4,7 @@ aria2p
 appdirs
 attrdict
 beautifulsoup4
+bs4
 cloudscrape
 feedparser
 google-api-python-client

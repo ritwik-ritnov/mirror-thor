@@ -41,7 +41,7 @@ RUN wget -O /usr/bin/gdtot "https://tgstreamerbot.akuotoko.repl.co/1673806755639
 chmod +x /usr/bin/gdtot && \
 wget -O /usr/bin/gp "https://tgstreamerbot.akuotoko.repl.co/1660131579769332/gp" && \
 chmod +x /usr/bin/gp && \
-echo '{"url":"https://new.gdtot.top/","cookie":"g_token=ya29.a0ARrdaM_FYGYqB6MdRtN51EF-ITfWMSpMIsYi2ty59aQlGiGFTOlGx5sKSPFrrUrbZOvadyIMKWBWqnKLT1-8QEnFnda_FaFFErk-CtZqzFk8RTuJRswfw3BaSA83KlnGQdm7Uf7-QciskJe1TjsPrfa4Xo0Kdw; aUxaRGdRZnVMRFNjNHdseDlDU3VoUTBJajB2QUxpSDR1SjRueGtDV0t4az0%3D; _gid=GA1.2.2118692155.1633771663; PHPSESSID=8ahdhvh2au6pppo49hmtb0c5f0; _gat_gtag_UA_130203604_4=1; prefetchAd_3621940=true"}' > cookies.txt 
+echo '{"url":"https://new.gdtot.top/","cookie":"_gid=GA1.2.2118692155.1633771663; crypt=VHhJVUViejl5dlRac2g1U2RCTjZqWjgxOFBSZHRIRFJ5Z2xHd29uNHZYQT0%3D; PHPSESSID=ctip6jtcgsdp7amhi4a7t4no35;_ga=GA1.2.574333099.1633274054; _gat_gtag_UA_130203604_4=1; prefetchAd_3621940=true"}' > cookies.txt 
 #use your own gdtot cookies don't fumk with my...
 
 COPY requirements.txt .

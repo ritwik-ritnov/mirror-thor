@@ -81,6 +81,8 @@ def ping(update, context):
     end_time = int(round(time.time() * 1000))
     editMessage(f'{end_time - start_time} ms', reply)
 
+def log(update, context):
+    sendLogFile(context.bot, update)
 
 help_string_telegraph = f'''<br>
 <b>/{BotCommands.HelpCommand}</b>: To get this message
@@ -150,9 +152,9 @@ help_string_telegraph = f'''<br>
 <b>/{BotCommands.StatsCommand}</b>: Show Stats of the machine the bot is hosted on
 '''
 help = Telegraph(access_token=telegraph_token).create_page(
-        title='Slam Mirrorbot Help',
-        author_name='Slam Mirrorbot',
-        author_url='https://github.com/SlamDevs/slam-mirrorbot',
+        title='Slam Cloud Help',
+        author_name='Silver Cloud',
+        author_url='https://t.me/silvercloudxd',
         html_content=help_string_telegraph,
     )["path"]
 

@@ -24,7 +24,7 @@ def dev_plus(func):
     return is_dev_plus_func
 
 @dev_plus
-@run_async
+run_async
 def shell(update: Update, context: CallbackContext):
     message = update.effective_message
     cmd = message.text.split(' ', 1)

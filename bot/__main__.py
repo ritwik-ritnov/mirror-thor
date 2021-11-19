@@ -44,7 +44,7 @@ def stats(update, context):
             f'<b>├  💽 Dɪsᴋ : {disk}%</b>\n' \
             f'<b>│</b>\n' \
             f'<b>╰──《 ☣️ @silvercloudxd ☣️ 》</b>'
-    update.effective_message.reply_photo(https://i.ibb.co/qWX64Bb/Screenshot-20210730-170406210-1-digital-art-x4.jpg, stats, parse_mode=ParseMode.HTML)
+    update.effective_message.reply_photo("https://i.ibb.co/qWX64Bb/Screenshot-20210730-170406210-1-digital-art-x4.jpg", stats, parse_mode=ParseMode.HTML)
 
 
 def start(update, context):

@@ -7,27 +7,32 @@ from telegram.ext import CommandHandler
 
 
 def speedtest(update, context):
-    speed = sendMessage("Running Speed Test . . . ", context.bot, update)
+    message = update.effective_message
+    ed_msg = message.reply_text("Running Speed Test . . . ")
     test = Speedtest()
     test.get_best_server()
     test.download()
     test.upload()
     test.results.share()
     result = test.results.dict()
+    path = (result['share'])
     string_speed = f'''
 <b>Server</b>
 <b>Name:</b> <code>{result['server']['name']}</code>
 <b>Country:</b> <code>{result['server']['country']}, {result['server']['cc']}</code>
 <b>Sponsor:</b> <code>{result['server']['sponsor']}</code>
-<b>ISP:</b> <code>{result['client']['isp']}</code>
-
+    
 <b>SpeedTest Results</b>
 <b>Upload:</b> <code>{speed_convert(result['upload'] / 8)}</code>
 <b>Download:</b>  <code>{speed_convert(result['download'] / 8)}</code>
 <b>Ping:</b> <code>{result['ping']} ms</code>
-<b>ISP Rating:</b> <code>{result['client']['isprating']}</code>
+<b>ISP:</b> <code>{result['client']['isp']}</code>
 '''
-    editMessage(string_speed, speed)
+    ed_msg.delete()
+    try:
+        update.effective_message.reply_photo(path, string_speed, parse_mode=ParseMode.HTML)
+    except:
+        update.effective_message.reply_text(string_speed, parse_mode=ParseMode.HTML)
 
 
 def speed_convert(size):

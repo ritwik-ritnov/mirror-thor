@@ -6,15 +6,19 @@ attrdict
 beautifulsoup4
 bs4
 cloudscrape
+datetime
 feedparser
 google-api-python-client
 google-auth-httplib2
 google-auth-oauthlib
 gunicorn
 hachoir
+heroku3
+html
 js2py
 lk21
 lxml
+math
 pillow
 psutil
 psycopg2-binary
@@ -29,6 +33,7 @@ requests
 speedtest-cli
 telegraph
 tenacity
+textwrap
 TgCrypto
 torrentool==1.1.0
 urllib3

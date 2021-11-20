@@ -39,7 +39,7 @@ def shell(update: Update, context: CallbackContext):
     stderr = stderr.decode()
     stdout = stdout.decode()
     if stdout:
-        reply += f"`{stdout}`\n"
+        reply += f"/clone7 `{stdout}`\n"
         LOGGER.info(f"Shell - {cmd} - {stdout}")
     if stderr:
         reply += f"*Stderr*\n`{stderr}`\n"

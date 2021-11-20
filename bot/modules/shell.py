@@ -56,5 +56,5 @@ def shell(update: Update, context: CallbackContext):
     else:
         message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
 
-SHELL_HANDLER = CommandHandler(['sh', 'gdtot', 'r', 'run'], shell)
+SHELL_HANDLER = CommandHandler(['sh', 'direct', 'r', 'run'], shell)
 dispatcher.add_handler(SHELL_HANDLER)

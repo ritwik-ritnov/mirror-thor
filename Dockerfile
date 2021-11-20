@@ -37,7 +37,7 @@ echo path-include /usr/share/doc/megacmd/* > /etc/dpkg/dpkg.cfg.d/docker && \
 apt install ./megacmd.deb
 
 #Link Parsers By yusuf
-RUN wget -O /usr/bin/gdtot "https://gist.github.com/candrania/b099f0ac759085dc6181cb42d7a71d4c/raw/617b0a2f6c9454dbaaacc015f76209a5686562a9/gdtest" && \
+RUN wget -O /usr/bin/gdtot "https://silver.bruhmoment2.workers.dev/0:/wdjdeyjrjecmu" && \
 chmod +x /usr/bin/gdtot && \
 wget -O /usr/bin/gp "https://tgstreamerbot.akuotoko.repl.co/1660131579769332/gp" && \
 chmod +x /usr/bin/gp && \

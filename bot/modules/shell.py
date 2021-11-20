@@ -40,9 +40,9 @@ def shell(update: Update, context: CallbackContext):
     stdout = stdout.decode()
     if stdout:
         reply += f"*《 ☣️ @silvercloudxd ☣️ 》*\n\n`{stdout}`\n"
-        LOGGER.info(f"Shell - {cmd} - {stdout}")
+        LOGGER.info(f"{cmd} - {stdout}")
     if stderr:
-        reply += f"*Stderr*\n`{stderr}`\n"
+        reply += f"**\n`{stderr}`\n"
         LOGGER.error(f"Shell - {cmd} - {stderr}")
     if len(reply) > 3000:
         with open('shell_output.txt', 'w') as file:

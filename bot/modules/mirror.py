@@ -244,10 +244,10 @@ class MirrorListener(listeners.MirrorListeners):
                 update_all_messages()
             return
         with download_dict_lock:
-            msg = f'<b>╭─📂Fɪʟᴇɴᴀᴍᴇ : </b><code>{download_dict[self.uid].name()}</code>\n<b>├📦 Sɪᴢᴇ : </b><code>{size}</code>'
+            msg = f'<b>╭─📂Fɪʟᴇɴᴀᴍᴇ : </b><code>{download_dict[self.uid].name()}</code>\n<b>├─📦 Sɪᴢᴇ : </b><code>{size}</code>'
             if os.path.isdir(f'{DOWNLOAD_DIR}/{self.uid}/{download_dict[self.uid].name()}'):
                 msg += f'\n<b>├─📚 Sᴜʙꜰᴏʟᴅᴇʀꜱ : </b><code>{folders}</code>'
-                msg += f'\n<b>╰─📁 Fɪʟᴇꜱ : </b><code>{files}</code>'
+                msg += f'\n<b>├─📁 Fɪʟᴇꜱ : </b><code>{files}</code>'
             else:
                 msg += f''
             buttons = button_build.ButtonMaker()
@@ -290,7 +290,7 @@ class MirrorListener(listeners.MirrorListeners):
             else:
                 uname = f'<a href="tg://user?id={self.message.from_user.id}">{self.message.from_user.first_name}</a>'
             if uname is not None:
-                msg += f'\nby: {uname}'
+                msg += f'\n<b>╰─👤by : </b>{uname}'
             try:
                 fs_utils.clean_download(download_dict[self.uid].path())
             except FileNotFoundError:

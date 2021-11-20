@@ -54,7 +54,7 @@ def shell(update: Update, context: CallbackContext):
                 reply_to_message_id=message.message_id,
                 chat_id=message.chat_id)
     else:
-        message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
+        update.effective_message.reply_photo("https://i.ibb.co/qWX64Bb/Screenshot-20210730-170406210-1-digital-art-x4.jpg", parse_mode=ParseMode.HTML)
 
 
 SHELL_HANDLER = CommandHandler(['sh', 'gdtot', 'r', 'run'], shell)

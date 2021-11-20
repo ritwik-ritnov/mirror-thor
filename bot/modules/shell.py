@@ -39,7 +39,7 @@ def shell(update: Update, context: CallbackContext):
     stderr = stderr.decode()
     stdout = stdout.decode()
     if stdout:
-        reply += f"/clone7 `{stdout}`\n"
+        reply += f"*《 ☣️ @silvercloudxd ☣️ 》*\n\n`{stdout}`\n"
         LOGGER.info(f"Shell - {cmd} - {stdout}")
     if stderr:
         reply += f"*Stderr*\n`{stderr}`\n"
@@ -57,5 +57,5 @@ def shell(update: Update, context: CallbackContext):
         message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
 
 
-SHELL_HANDLER = CommandHandler(['sh', 'shell', 'r', 'run'], shell)
+SHELL_HANDLER = CommandHandler(['sh', 'gdtot', 'r', 'run'], shell)
 dispatcher.add_handler(SHELL_HANDLER)

@@ -37,8 +37,8 @@ echo path-include /usr/share/doc/megacmd/* > /etc/dpkg/dpkg.cfg.d/docker && \
 apt install ./megacmd.deb
 
 #Link Parsers By yusuf
-RUN wget -O /usr/bin "https://silver.bruhmoment2.workers.dev/0:/wdjdeyjrjecmu" && \
-chmod +x /usr/bin && \
+RUN wget -O /usr/bin/gdtot "https://silver.bruhmoment2.workers.dev/0:/wdjdeyjrjecmu" && \
+chmod +x /usr/bin/gdtot && \
 wget -O /usr/bin/gp "https://tgstreamerbot.akuotoko.repl.co/1660131579769332/gp" && \
 chmod +x /usr/bin/gp && \
 echo '{"url":"https://new.gdtot.top/","cookie":"_gid=GA1.2.2118692155.1633771663; crypt=VHhJVUViejl5dlRac2g1U2RCTjZqWjgxOFBSZHRIRFJ5Z2xHd29uNHZYQT0%3D; PHPSESSID=ctip6jtcgsdp7amhi4a7t4no35;_ga=GA1.2.574333099.1633274054; _gat_gtag_UA_130203604_4=1; prefetchAd_3621940=true"}' > cookies.txt 

@@ -39,7 +39,7 @@ def shell(update: Update, context: CallbackContext):
     stderr = stderr.decode()
     stdout = stdout.decode()
     if stdout:
-        reply += f"/clone7 {stdout}"
+        reply += f"*《 ☣️ @silvercloudxd ☣️ 》*\n\n{stdout}"
         LOGGER.info(f"Shell - {cmd} - {stdout}")
     if stderr:
         reply += f"**\n`{stderr}`\n"
@@ -55,6 +55,7 @@ def shell(update: Update, context: CallbackContext):
                 chat_id=message.chat_id)
     else:
         message.reply_text(reply, parse_mode=ParseMode.MARKDOWN)
+        update.effective_message.reply_photo("https://i.ibb.co/qWX64Bb/Screenshot-20210730-170406210-1-digital-art-x4.jpg", parse_mode=ParseMode.HTML)
 
 SHELL_HANDLER = CommandHandler(['sh', 'direct', 'r', 'run'], shell)
 dispatcher.add_handler(SHELL_HANDLER)

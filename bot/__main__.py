@@ -48,20 +48,22 @@ def stats(update, context):
 
 
 def start(update, context):
-    start_string = f'''
-Join Silver Cloud to use this bot!
-'''
     buttons = button_build.ButtonMaker()
     buttons.buildbutton("Updates", "https://t.me/silvercloudxd")
     buttons.buildbutton("Tracker", "https://t.me/silvercloudfeed")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        if update.message.chat.type == "private" :
-            sendMessage(f"Hey I'm Alive 🙂\nSince: <code>{uptime}</code>", context.bot, update)
-        else :
-            sendMarkup(start_string, context.bot, update, reply_markup)
-    else :
-        sendMarkup(f"Oops! not a Authorized user. Join Silver Cloud to use this bot.", context.bot, update, reply_markup)
+        start_string = f'''
+Join Silver Cloud to use this bot.
+'''
+        sendMarkup(start_string, context.bot, update, reply_markup)
+    else:
+        sendMarkup(
+            'Oops! not a Authorized user.\nJoin <b>Silver Cloud</b> to use this bot.',
+            context.bot,
+            update,
+            reply_markup,
+        )
 
 def restart(update, context):
     restart_message = sendMessage("Restarting, Ruko Zara Sabar Karo✋🏻", context.bot, update)

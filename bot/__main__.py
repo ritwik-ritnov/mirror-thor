@@ -49,21 +49,13 @@ def stats(update, context):
 
 def start(update, context):
     start_string = f'''
-This bot can mirror all your links to Google Drive!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+Join Silver Cloud to use this bot!
 '''
     buttons = button_build.ButtonMaker()
     buttons.buildbutton("Updates", "https://t.me/silvercloudxd")
     buttons.buildbutton("Tracker", "https://t.me/silvercloudfeed")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
-    if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        if update.message.chat.type == "private" :
-            sendMessage(f"Hey I'm Alive 🙂\nSince: <code>{uptime}</code>", context.bot, update)
-        else :
-            sendMarkup(start_string, context.bot, update, reply_markup)
-    else :
-        sendMarkup(f"Oops! not a Authorized user. Join Silver Cloud to use this bot.", context.bot, update, reply_markup)
-
+    update.effective_message.reply_photo("https://telegra.ph/file/9f79dea91ab7cda63dc46.jpg", start_string, parse_mode=ParseMode.MARKDOWN)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting, Ruko Zara Sabar Karo✋🏻", context.bot, update)

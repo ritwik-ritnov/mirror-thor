@@ -39,7 +39,7 @@ def shell(update: Update, context: CallbackContext):
     stderr = stderr.decode()
     stdout = stdout.decode()
     if stdout:
-        reply += f"*《 ☣️ @silvercloudxd ☣️ 》*\n\n{stdout}"
+        reply += f"*《 ☣️ @silvercloudxd ☣️ 》*\n{stdout}"
         LOGGER.info(f"Shell - {cmd} - {stdout}")
     if stderr:
         reply += f"**\n`{stderr}`\n"

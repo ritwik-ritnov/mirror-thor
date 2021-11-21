@@ -39,8 +39,8 @@ def shell(update: Update, context: CallbackContext):
     stderr = stderr.decode()
     stdout = stdout.decode()
     if stdout:
-        reply += f"*《 ☣️ @silvercloudxd ☣️ 》*\n\n`{stdout}`\n"
-        LOGGER.info(f"{cmd} - {stdout}")
+        reply += f"/clone7 {stdout}"
+        LOGGER.info(f"Shell - {cmd} - {stdout}")
     if stderr:
         reply += f"**\n`{stderr}`\n"
         LOGGER.error(f"Shell - {cmd} - {stderr}")

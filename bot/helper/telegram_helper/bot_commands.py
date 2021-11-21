@@ -30,7 +30,7 @@ class _BotCommands:
         self.QbTarMirrorCommand = 'qbtarmirror7'
         self.QbZipMirrorCommand = 'qbzipmirror7'
         self.DeleteCommand = 'del7'
-        self.ShellCommand = 'shell'
+        self.ShellCommand = 'shell7'
         self.ExecHelpCommand = 'exechelp7'
         self.TsHelpCommand = 'tshelp7'
         self.LeechSetCommand = 'leechset7'

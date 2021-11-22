@@ -46,7 +46,6 @@ class _BotCommands:
         self.LeechWatchCommand = 'leechwatch7'
         self.LeechTarWatchCommand = 'leechtarwatch7'
         self.LeechZipWatchCommand = 'leechzipwatch7'
-        self.UsageCommand = 'usage'
         self.GDTOTCommand = 'gdtot'
         self.MediaInfoCommand = 'mediainfo'
 

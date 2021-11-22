@@ -55,6 +55,7 @@ def start(update, context):
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
 Join Silver Cloud to use this bot.
+Type /{BotCommands.HelpCommand} to get a list of available commands in group!
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:

@@ -33,7 +33,7 @@ def cloneNode(update, context):
                 sendMessage(msg2, context.bot, update)
                 return
         if files < 15:
-            msg = sendMessage(f"Cloning: <code>{link}</code>", context.bot, update)
+            msg = sendMessage(f"Cloning: Ruko Zara Sabar Karo✋🏻", context.bot, update)
             result, button = gd.clone(link)
             deleteMessage(context.bot, msg)
         else:
@@ -65,8 +65,10 @@ def cloneNode(update, context):
             men = f'{uname} '
         if button in ["cancelled", ""]:
             sendMessage(men + result, context.bot, update)
+            postCH(men + result, context.bot, update)
         else:
             sendMarkup(result + cc, context.bot, update, button)
+            postCH(result + cc, context.bot, update, button)
     else:
         sendMessage('𝐏𝐫𝐨𝐯𝐢𝐝𝐞 𝐆-𝐃𝐫𝐢𝐯𝐞 𝐒𝐡𝐚𝐫𝐞𝐚𝐛𝐥𝐞 𝐋𝐢𝐧𝐤 𝐭𝐨 𝐂𝐥𝐨𝐧𝐞.', context.bot, update)
 

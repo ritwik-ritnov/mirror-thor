@@ -8,7 +8,7 @@ from bot.helper.mirror_utils.upload_utils.gdtot_helper import GDTOT
 from time import sleep
 
 
-def list_drive(update, context):
+def list(update, context):
     try:
         search = update.message.text.split(' ', maxsplit=1)[1]
         LOGGER.info(f"listing: {search}")
@@ -46,9 +46,8 @@ def gdtot(update, context):
     except Exception as e:
         LOGGER.info(e)
 
-list_handler = CommandHandler(BotCommands.ListCommand, list_drive, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
+list_handler = CommandHandler(BotCommands.ListCommand, list, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
 gdtot_handler = CommandHandler(BotCommands.GDTOTCommand, gdtot, filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
 
 dispatcher.add_handler(list_handler)
 dispatcher.add_handler(gdtot_handler)
-

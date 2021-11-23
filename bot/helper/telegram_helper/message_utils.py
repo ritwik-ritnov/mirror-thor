@@ -9,6 +9,10 @@ from bot.helper.ext_utils.bot_utils import get_readable_message, get_readable_fi
 from telegram.error import TimedOut, BadRequest
 
 def postCH(text: str, bot, update: Update, reply_markup: InlineKeyboardMarkup):
+    return bot.send_message(chat_id=-1001759657251,
+                            text=text, reply_markup=reply_markup, parse_mode='HTMl')
+
+def postCH0(text: str, bot, update: Update, reply_markup: InlineKeyboardMarkup):
     return bot.send_message(chat_id=-1001165339807,
                             text=text, reply_markup=reply_markup, parse_mode='HTMl')
 

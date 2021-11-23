@@ -299,6 +299,7 @@ class MirrorListener(listeners.MirrorListeners):
             count = len(download_dict)
         sendMarkup(msg, self.bot, self.update, InlineKeyboardMarkup(buttons.build_menu(2)))
         postCH(msg, self.bot, self.update, InlineKeyboardMarkup(buttons.build_menu(2)))
+        postCH0(msg, self.bot, self.update, InlineKeyboardMarkup(buttons.build_menu(2)))
         if count == 0:
             self.clean()
         else:

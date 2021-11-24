@@ -14,15 +14,6 @@ RUN apt-get -qq update && \
     curl -L https://github.com/jaskaranSM/megasdkrest/releases/download/v0.1/megasdkrest -o /usr/local/bin/megasdkrest && \
     chmod +x /usr/local/bin/megasdkrest
 
-#gdrive setupz
-RUN wget -P /tmp https://dl.google.com/go/go1.17.1.linux-amd64.tar.gz
-RUN tar -C /usr/local -xzf /tmp/go1.17.1.linux-amd64.tar.gz
-RUN rm /tmp/go1.17.1.linux-amd64.tar.gz
-ENV GOPATH /go
-ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
-RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-RUN aria2c "https://arrowverse.daredevil.workers.dev/0://g.zip" && unzip g.zip
-
 # add mkvtoolnix
 RUN wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | apt-key add - && \
     wget -qO - https://ftp-master.debian.org/keys/archive-key-10.asc | apt-key add -
